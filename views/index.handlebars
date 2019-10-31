@@ -1,0 +1,38 @@
+<div class="container">
+    <img id="burger-image"
+        src="https://www.cleveland.com/resizer/m_FaXRMDEX6mHN_4i5MgQ9fH2Vs=/700x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/VCJPOMVLFZEADB6OL2U3JVFOYM.png">
+    <h2 class="heading">Eat-Da-Burger!</h2>
+
+    <div class="burger-div">
+        <ul id="burgers-to-devour">
+            <h3>Burgers to Devour!</h3>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                <p>{{id}}. {{burger_name}} <button class="devour" data-burgerid="{{id}}"> Devour it!</button></p>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+        <div>
+
+            <div class="burger-div">
+                <ul id="burgers-devoured">
+                    <h3>Burgers Devoured!</h3>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        <p>{{id}}. {{burger_name}}</p>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+
+            <form action="/api/burgers" method="POST">
+                <textarea type="text" name="burger" id="burger-input"></textarea>
+                <p id="text">Enter a burger you want to eat. Then, click the "Add Burger" button.</p>
+                <button type="submit" id="add-burger">Add Burger</button>
+            </form>
+
+        </div>
