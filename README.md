@@ -11,10 +11,7 @@ Creating a burger logger with MySQL, Node, Express, Handlebars and a homemade OR
 You will need to have the following Node.js packages installed prior to running this application:
 inquirer and MYSQL.
 
-## Screenshots
-
-Screenshots for each of the following versions of Bamazon have been included in this repository under the
-folder "Screenshots."
+## Link to Heroku
 
 ## HOW TO USE:
 
